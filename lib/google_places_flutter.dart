@@ -17,7 +17,7 @@ class GooglePlaceAutoCompleteTextField extends StatefulWidget {
   int debounceTime = 600;
   List<String>? countries = [];
   String? Function(String?)? validator;
-  bool? isReadOnly;
+  bool isReadOnly;
   TextEditingController textEditingController = TextEditingController();
 
   GooglePlaceAutoCompleteTextField({
