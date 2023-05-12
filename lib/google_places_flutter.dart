@@ -29,7 +29,7 @@ class GooglePlaceAutoCompleteTextField extends StatefulWidget {
     this.isLatLngRequired = true,
     this.textStyle: const TextStyle(),
     this.countries,
-    this.validator,this.isReadOnly,
+    this.validator,this.isReadOnly = false,
     this.getPlaceDetailWithLatLng,
   });
 
