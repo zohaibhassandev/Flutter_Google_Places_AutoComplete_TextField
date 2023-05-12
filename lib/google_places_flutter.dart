@@ -17,6 +17,7 @@ class GooglePlaceAutoCompleteTextField extends StatefulWidget {
   int debounceTime = 600;
   List<String>? countries = [];
   String? Function(String?)? validator;
+  bool? isReadOnly;
   TextEditingController textEditingController = TextEditingController();
 
   GooglePlaceAutoCompleteTextField({
@@ -28,7 +29,7 @@ class GooglePlaceAutoCompleteTextField extends StatefulWidget {
     this.isLatLngRequired = true,
     this.textStyle: const TextStyle(),
     this.countries,
-    this.validator,
+    this.validator,this.isReadOnly,
     this.getPlaceDetailWithLatLng,
   });
 
@@ -56,6 +57,7 @@ class _GooglePlaceAutoCompleteTextFieldState
         decoration: widget.inputDecoration,
         style: widget.textStyle,
         controller: widget.textEditingController,
+        readOnly: widget.isReadOnly,
         onChanged: (string) => (subject.add(string)),
         onFieldSubmitted: (value) {
           removeOverlay();
